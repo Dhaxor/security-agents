@@ -1,0 +1,11 @@
+{
+  "name": "hardhat-sample",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
+  "devDependencies": {
+    "hardhat": "^2.22.0"
+  },
+  "scripts": {
+    "test": "hardhat test"
+  }
+}
