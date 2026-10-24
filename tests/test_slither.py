@@ -127,7 +127,7 @@ class SlitherNormalizationTests(unittest.TestCase):
         self.assertEqual(result.return_code, 0)
         self.assertEqual(result.stdout, "scan ok")
         self.assertEqual(len(result.findings), 2)
-        self.assertTrue(result.target_path.endswith("tests/fixtures/foundry_reentrancy"))
+        self.assertTrue(result.target_path.replace("\\", "/").endswith("tests/fixtures/foundry_reentrancy"))
         self.assertEqual(result.to_dict()["status"], "ok")
 
 

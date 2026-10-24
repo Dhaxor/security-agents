@@ -107,7 +107,7 @@ class CLITests(unittest.TestCase):
         )
         self.assertEqual(slither["tool"], "slither")
         self.assertEqual(slither["command"], [])
-        self.assertTrue(str(slither["target_path"]).endswith("examples/foundry-sample"))
+        self.assertTrue(str(slither["target_path"]).replace("\\", "/").endswith("examples/foundry-sample"))
         self.assertIsNone(slither["return_code"])
         self.assertFalse(slither["success"])
         self.assertEqual(slither["status"], "unavailable")
